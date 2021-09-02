@@ -1,5 +1,6 @@
 import mongoose from '../helper/database';
 
+
 const ProjectSchema = mongoose.Schema({
     title: {
         type: String,
@@ -27,8 +28,8 @@ const ProjectSchema = mongoose.Schema({
     },
     date:{
         type: Date,
-        default: new Date.now()
+        default: Date.now
     }
 });
 
-export default (await mongoose).model("projects",ProjectSchema);
+export default mongoose.model("projects",ProjectSchema);
