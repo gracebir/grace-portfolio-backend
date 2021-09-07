@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "this is the backend of my portfolio",
   "main": "src/main.js",
+  "type": "module",
   "repository": "https://github.com/gracebir/grace-portfolio-backend",
   "author": "grace birindwa",
   "license": "MIT",
-  "private": null,
   "scripts": {
-    "start": "node src/main.js --exec babel-node -e js",
+    "start": "node --experimental-modules --es-module-specifier-resolution=node src/main.js",
     "devStart": "nodemon src/main.js --exec babel-node -e js"
   },
   "dependencies": {
@@ -25,5 +25,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "14.15.4"
   }
 }
